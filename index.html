@@ -262,7 +262,9 @@
         setTimeout(loop, 50);
     }
 
-    loop();
+    if(!isMobileBrowser()){
+        loop();
+    }
 </script>
 <!--退出加载动画-->
 

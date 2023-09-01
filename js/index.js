@@ -19,3 +19,7 @@ navMenuItems.forEach(item=>{
     item.addEventListener('click',e=>handleMenuItemClick(e.target));
     item.classList.contains('active') && handleMenuItemClick(item);
 });
+
+function isMobileBrowser() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
