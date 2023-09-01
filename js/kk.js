@@ -1,5 +1,5 @@
 console.clear();
-console.log("\n %c🌸 小陈的名片 V1.2 By Ricken\'s | https://kk.hackerjk.top/ 🌸", "color:#fff;background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);padding:5px;border-radius: 15px;");
+console.log("\n %c🌸 https://blog.lincloud.love/ 🌸", "color:#fff;background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);padding:5px;border-radius: 15px;");
 console.log("\n");
 console.log("(｡･∀･)ﾉﾞ嗨，欢迎来看我！🎉");
 console.log("这次你又想从我这拿走什么秘密🥺！！");

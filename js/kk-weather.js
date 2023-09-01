@@ -26,4 +26,4 @@ class KK {
     }
 }
 const kk=new KK()
-kk.init()
+// kk.init()
