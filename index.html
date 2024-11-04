@@ -56,7 +56,7 @@
                 <a class="active" data-rel="home-me-section" href="#">首页</a>
                 <a data-rel="about-exp-section" href="#">关于</a>
                 <a data-rel="course-exp-section" href="#">历程</a>
-                <!--                    <a data-rel="website-exp-section" href="#">站点</a>-->
+                <a data-rel="music-exp-section" href="#">音乐</a>
             </nav>
         </div>
     </div><!-- 导航结束 -->
@@ -139,14 +139,7 @@
                     <div id="boxs">
                         <div class="track-list">
                             <!-- 时间轴开始 -->
-                            <ul id="track-list">
-                                <li>
-                                    <i class="node-icon"><i class="fa fa-spinner fa-spin"
-                                                            style="color:#66CCCC"></i></i>
-                                    <span class="time" style="color:#66CCCC">next</span>
-                                    <span class="txt" style="color:#66CCCC">实现自己的精彩</span>
-                                </li>
-                            </ul>
+                            <ul id="track-list"></ul>
                         </div><!-- 时间轴结束 -->
                     </div>
                 </div>
@@ -178,6 +171,11 @@
                 </div>
             </div><!-- 站点内容结束 -->
         </section><!-- 站点结束 -->
+        <section class="music-exp-section">
+            <div class="main">
+            <iframe frameborder="no" border="0" style="margin: auto;border: none" marginwidth="0" marginheight="0" width=300 height=400 src="//music.163.com/outchain/player?type=0&id=8346254173&auto=1&height=400"></iframe>
+            </div>
+        </section><!-- 站点结束 -->
     </div><!-- 内容结束 -->
 
 </div><!-- 主体结束 -->
@@ -189,29 +187,9 @@
 <div class="footer">
     <a>Build&ensp;By&ensp;林&ensp;<i class="fa fa-heartbeat fa-lg kk-heart"
                                      style="color: red"></i>&ensp;Copyright&ensp;<i class="fa fa-copyright"></i>2022</a>
-    <span id="sitetime"></span><!--运行时间-->
+    <span id="siteTime"></span><!--运行时间-->
 </div>
 <!-- 版权结束 -->
-
-<!--region 天气 todo-->
-<!--<div class="kk-weather" id="kk_weather">
-    <div class="kk-weather-box">
-        <div class="kk-weather-icon">
-            <i class="fa fa-spinner fa-spin" id="kk_icon"></i>
-        </div>
-        <div class="kk-weather-data">
-            <div class="kk-weather-city">
-                <a id="kk_city">-&#45;&#45;</a>
-            </div>
-            <div class="kk-weather-wd">
-                <i class="fa fa-thermometer" style="padding-right:5px;"></i><a id="kk_temp">&#45;&#45;</a>
-            </div>
-        </div>
-    </div>
-</div>-->
-<!--endregion-->
-
-<!-- 加载动画 -->
 <div id="kk_loading_bg" style="z-index: 99999999;">
     <div id="kk_loading">
         <div class='wrap' id='wrap1'>
