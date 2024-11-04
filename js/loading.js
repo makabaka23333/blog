@@ -1,11 +1,12 @@
-const url = "./json/time.json";
-const request = new XMLHttpRequest();
-request.open("get", url, true);
-request.send();
-request.onload = function () {
+const url1 = "./json/time.json";
+const url2 = "./json/me.json";
+const request1 = new XMLHttpRequest();
+request1.open("get", url1, true);
+request1.send();
+request1.onload = function () {
     let list = document.getElementById("track-list");
-    if (request.status === 200) {
-        const json = JSON.parse(request.responseText);
+    if (request1.status === 200) {
+        const json = JSON.parse(request1.responseText);
         let key;
         let num = 0;
         for (key in json) {
@@ -26,5 +27,17 @@ request.onload = function () {
             "<span class=\"txt\">Text获取失败</span>"
         list.append(newLi);
         console.log("%c历程获取失败", "color: #FC427B");
+    }
+}
+const request2 = new XMLHttpRequest();
+request2.open("get", url2, true);
+request2.send();
+request2.onload = function () {
+    if (request2.status === 200) {
+        const json = JSON.parse(request2.responseText);
+        let kk_about_1 = document.getElementById("kk_about_1");
+        kk_about_1.innerHTML = json['me']
+        let kk_about_2 = document.getElementById("kk_about_2");
+        kk_about_2.innerHTML = json['about']
     }
 }

@@ -56,7 +56,6 @@
                 <a class="active" data-rel="home-me-section" href="#">首页</a>
                 <a data-rel="about-exp-section" href="#">关于</a>
                 <a data-rel="course-exp-section" href="#">历程</a>
-                <a data-rel="music-exp-section" href="#">音乐</a>
             </nav>
         </div>
     </div><!-- 导航结束 -->
@@ -67,11 +66,9 @@
             <div class="main">
                 <!-- 首页内容 -->
                 <img alt="哎呀！图片不见了" class="bgo" src="img/bgo.jpg"/>
-                <div class="ato-box">
-                    <video autoplay muted preload onclick="alert('让孩子再吃一口😋')" loop class="ato">
+                <video autoplay muted preload onclick="alert('让孩子再吃一口😋')" loop id="ato" class="ats">
                         <source  src="img/img.mp4" >
                     </video>
-                </div>
                 <div class="name" onclick="this.innerHTML=(this.innerHTML==='林'?'？？？':'林');">林</div>
                 <div class="motto"
                      onclick="this.innerHTML=(this.innerHTML==='如果不开心就来杯可乐ba🥤'?'开心点,少喝可乐':'如果不开心就来杯可乐ba🥤');">
@@ -110,19 +107,10 @@
                     <source src="img/img.mp4">
                 </video>
                 <div class="about" style="text-shadow: 1px 1px 0 #fff;">
-                    <p style="color: #29617b" id="kk_about_1">
-                        >_。<br>
-                        野生菜鸡程序猿<br>
-                    </p>
+                    <p style="color: #29617b" id="kk_about_1"></p>
                 </div>
                 <div class="about" style="margin-top:20px;text-shadow: 1px 1px 0 #fff;">
-                    <p style="color: #29617b" id="kk_about_2">
-                        野生程序员👨🏻‍💻
-                        <br>最常用的键是 Ctrl 和 C
-                        <br>偶尔也会按下 Ctrl 和 X
-                        <br>只要咖啡☕️供应充足
-                        <br>代码就能源源不断地产生
-                    </p>
+                    <p style="color: #29617b" id="kk_about_2"></p>
                 </div>
             </div>
             <!-- 关于内容结束 -->
@@ -148,34 +136,6 @@
                 </div>
             </div><!-- 历程内容结束 -->
         </section><!-- 历程结束 -->
-        <section class="website-exp-section">
-            <!-- 站点开始 -->
-            <div class="main">
-                <!-- 站点内容开始 -->
-                <img alt="哎呀！图片不见了" class="bgt" src="img/bgt.jpg"/>
-                <a href="https://kk.hackerjk.top" target="_blank">
-                    <div class="web web_1">博客</div>
-                </a><!-- 站点一 -->
-                <a href="https://files.林.cn" target="_blank">
-                    <div class="web web_1">文件库</div>
-                </a><!-- 站点二 -->
-                <a href="https://tiy.hackerjk.top" target="_blank">
-                    <div class="web web_1">在线代码</div>
-                </a><!-- 站点三 -->
-                <!-- <a href="#" target="_self">
-                    <div class="web web_0"><i class="fa fa-bug fa-spin"></i>努力开发中<i class="fa fa-bug fa-spin"></i>
-                    </div>
-                </a> -->
-                <div class="tips">
-                    <a style="color: #2ecc71;">所有站点均正常运行</a>
-                </div>
-            </div><!-- 站点内容结束 -->
-        </section><!-- 站点结束 -->
-        <section class="music-exp-section">
-            <div class="main">
-            <iframe frameborder="no" border="0" style="margin: auto;border: none" marginwidth="0" marginheight="0" width=300 height=400 src="//music.163.com/outchain/player?type=0&id=8346254173&auto=1&height=400"></iframe>
-            </div>
-        </section><!-- 站点结束 -->
     </div><!-- 内容结束 -->
 
 </div><!-- 主体结束 -->
@@ -211,6 +171,7 @@
 </div>
 
 <!-- 下面是Js -->
+<script src="./js/gsap.min.js"></script>
 <script src="./js/loading.js"></script><!--时间轴加载-->
 <script src="./js/kk.js"></script><!--KK-->
 <!--    <script src="./js/kk-weather.js"></script>&lt;!&ndash;小陈天气&ndash;&gt;-->
@@ -224,24 +185,6 @@
             const loading = document.getElementById('kk_loading_bg');
             loading.style.display = 'none';
         }
-    }
-
-    function loop() {
-        var i, n, s = '';
-
-        for (i = 0; i < 10; i++) {
-            n = Math.floor(Math.sin((Date.now() / 200) + (i / 2)) * 4) + 4;
-
-            s += String.fromCharCode(0x2581 + n);
-        }
-
-        window.location.hash = s;
-
-        setTimeout(loop, 50);
-    }
-
-    if(!isMobileBrowser()){
-        loop();
     }
 </script>
 <!--退出加载动画-->

@@ -131,6 +131,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
+    height: 35%;
 }
 
 .bgt {
@@ -290,7 +291,7 @@ body {
 .about {
     font-size: 12px;
     padding: 10px;
-    margin: 0 40px;
+    margin: 0 20px;
     border-radius: 15px;
     background: #ecf0f3;
     box-shadow: inset 5px 5px 10px #b1b4b6,
